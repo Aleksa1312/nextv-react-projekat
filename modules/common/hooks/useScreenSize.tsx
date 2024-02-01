@@ -21,14 +21,20 @@ export default function useScreenWidth() {
     "2xl": 1536,
   };
 
-  const [screenWidth, setScreenWidth] = useState<number>(window.screen.width);
+  const [screenWidth, setScreenWidth] = useState<number>(0);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     function handleScreenResize() {
       setScreenWidth(window.screen.width);
     }
 
+    handleScreenResize();
+
     window.addEventListener("resize", handleScreenResize);
+
+    return () => window.removeEventListener("resize", handleScreenResize);
   }, []);
 
   function isBreakpoint(screen: TailwindBreakpoint) {
