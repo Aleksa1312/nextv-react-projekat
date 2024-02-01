@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/modules/header/components/header";
 import LoginDialog from "@/modules/auth/components/login/dialog";
 import { ThemeProvider } from "@/modules/theme/components/provider";
+import Footer from "@/modules/footer/components/footer";
+import AuthProvider from "@/modules/auth/components/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,11 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider>
-          <Header />
-          <LoginDialog />
-          {children}
-        </ThemeProvider>
+        <AuthProvider>
+          <ThemeProvider>
+            <Header />
+            <LoginDialog />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </AuthProvider>
       </body>
     </html>
   );
