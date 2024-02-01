@@ -1,0 +1,35 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg114796" viewBox="0 0 1024 768" height="768" width="1024" version="1.1">
+  <metadata id="metadata114802" fill="#E8E6E3">
+    <rdf:rdf fill="#E8E6E3">
+      <cc:work rdf:about="" fill="#E8E6E3">
+        <dc:format fill="#E8E6E3">image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" fill="#E8E6E3"></dc:type>
+      </cc:work>
+    </rdf:rdf>
+  </metadata>
+  <defs id="defs114800"></defs>
+  <linearGradient spreadMethod="pad" y2="30%" x2="-10%" y1="120%" x1="30%" id="3d_gradient2-logo-18319cd1-f643-4790-91ed-78c96a5f4b79" fill="#E8E6E3">
+    <stop id="stop114777" stop-opacity="1" stop-color="#ffffff" offset="0%" style="--darkreader-inline-stopcolor: #181a1b;" data-darkreader-inline-stopcolor="" fill="#E8E6E3"></stop>
+    <stop id="stop114779" stop-opacity="1" stop-color="#000000" offset="100%" style="--darkreader-inline-stopcolor: #000000;" data-darkreader-inline-stopcolor="" fill="#E8E6E3"></stop>
+  </linearGradient>
+  <linearGradient gradientTransform="rotate(-30)" spreadMethod="pad" y2="30%" x2="-10%" y1="120%" x1="30%" id="3d_gradient3-logo-18319cd1-f643-4790-91ed-78c96a5f4b79" fill="#E8E6E3">
+    <stop id="stop114782" stop-opacity="1" stop-color="#ffffff" offset="0%" style="--darkreader-inline-stopcolor: #181a1b;" data-darkreader-inline-stopcolor="" fill="#E8E6E3"></stop>
+    <stop id="stop114784" stop-opacity="1" stop-color="#cccccc" offset="50%" style="--darkreader-inline-stopcolor: #35393b;" data-darkreader-inline-stopcolor="" fill="#E8E6E3"></stop>
+    <stop id="stop114786" stop-opacity="1" stop-color="#000000" offset="100%" style="--darkreader-inline-stopcolor: #000000;" data-darkreader-inline-stopcolor="" fill="#E8E6E3"></stop>
+  </linearGradient>
+  <g id="logo-group" fill="#E8E6E3">
+    <image xlink:href="" id="container" style="display: none;" x="272" y="144" width="480" height="480" transform="translate(0 0)" fill="#E8E6E3"></image>
+    <g id="logo-center" transform="translate(137.8051500000002 0)" fill="#E8E6E3">
+      <image xlink:href="" id="icon_container" style="display: none;" x="0" y="0" fill="#E8E6E3"></image>
+      <g id="slogan" style="font-style:normal;font-weight:700;font-size:32px;line-height:1;font-family:'Brandmark1 Bold Color';font-variant-ligatures:none;text-align:center;text-anchor:middle" transform="translate(0 0)" fill="#E8E6E3"></g>
+      <g id="title" style="font-style:normal;font-weight:700;font-size:72px;line-height:1;font-family:'Brandmark1 Bold Color';font-variant-ligatures:normal;text-align:center;text-anchor:middle" transform="translate(0 0)" fill="#E8E6E3">
+        <g id="path114805" aria-label="N" transform="translate(0 351.92799999999994) translate(50 -46.55199999999998) scale(2.8) translate(-399.02694 53.64)" fill="#E8E6E3"> <path class="c1" d="M88.08252,93.00806v35.07422H76.77783V71.91772h10.01563l25.12305,35.39795V71.91772h11.30566v56.16455 h-10.23242L88.08252,93.00806z" transform="translate(322.24911 -125.55772)" stroke-width="0px" stroke-linejoin="miter" stroke-miterlimit="2" fill="#2E3133" stroke="#C2BCB4" style="--darkreader-inline-fill: #2e3133; --darkreader-inline-stroke: #c2bcb4;" data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></path> </g>
+        <g id="path114807" aria-label="E" transform="translate(0 351.92799999999994) translate(201.59373599999986 -46.55199999999998) scale(2.8) translate(-453.16756 53.64)" fill="#E8E6E3"> <path class="c1" d="M81.8186,128.08252h36.36279v-10.51367H81.8186V128.08252z M81.8186,105.47217h36.36279v-10.729H81.8186 V105.47217z M81.8186,71.91748v10.729h36.36279v-10.729H81.8186z" transform="translate(371.34896 -125.55748)" stroke-width="0px" stroke-linejoin="miter" stroke-miterlimit="2" fill="#2E3133" stroke="#C2BCB4" style="--darkreader-inline-fill: #2e3133; --darkreader-inline-stroke: #c2bcb4;" data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></path> </g>
+        <g id="path114809" aria-label="X" transform="translate(0 351.92799999999994) translate(303.9561359999998 -46.55199999999998) scale(2.8) translate(-489.72556 53.64)" fill="#E8E6E3"> <polygon class="c1" points="112.69824,71.91748 100.02539,90.66797 87.28711,71.91748 73.95898,71.91748 92.78125,99.99268 73.70703,128.08252 87.06445,128.08252 99.9248,109.32471 99.9408,109.34808 125.66718,71.91748 " transform="translate(416.01853 -125.55748)" stroke-width="0px" stroke-linejoin="miter" stroke-miterlimit="2" fill="#2E3133" stroke="#C2BCB4" style="--darkreader-inline-fill: #2e3133; --darkreader-inline-stroke: #c2bcb4;" data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></polygon> <polygon class="c3" points="116.85968,114.24286 103.29663,114.24286 112.78516,128.08252 126.29297,128.08252 " transform="translate(416.01853 -125.55748)" stroke-width="0px" stroke-linejoin="miter" stroke-miterlimit="2" fill="#2E3133" stroke="#C2BCB4" style="--darkreader-inline-fill: #2e3133; --darkreader-inline-stroke: #c2bcb4;" data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></polygon> </g>
+        <g id="path114811" aria-label="T" transform="translate(0 351.92799999999994) translate(441.90093599999983 -46.55199999999998) scale(2.8) translate(-538.99156 53.64)" fill="#E8E6E3"> <path class="c1" d="M94.23975,82.64648H78.97412v-10.729h42.05176v10.729h-15.48145v45.43604H94.23975V82.64648z" transform="translate(460.01744 -125.55748)" stroke-width="0px" stroke-linejoin="miter" stroke-miterlimit="2" fill="#2E3133" stroke="#C2BCB4" style="--darkreader-inline-fill: #2e3133; --darkreader-inline-stroke: #c2bcb4;" data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></path> </g>
+        <g id="path114813" aria-label="V" transform="translate(0 351.92799999999994) translate(554.0440999999996 -46.55199999999998) scale(2.8) translate(-579.04269 53.64)" fill="#E8E6E3"> <path class="c1" d="M74.25073,71.91748H86.427l13.60938,37.31348l13.60938-37.31348h12.10352l-21.19824,56.16504h-9.10156 L74.25073,71.91748z" transform="translate(504.79196 -125.55748)" stroke-width="0px" stroke-linejoin="miter" stroke-miterlimit="2" fill="#2E3133" stroke="#C2BCB4" style="--darkreader-inline-fill: #2e3133; --darkreader-inline-stroke: #c2bcb4;" data-darkreader-inline-fill="" data-darkreader-inline-stroke=""></path> </g>
+           </g>
+      <image xlink:href="" id="icon" style="display: none;" x="0" y="0" fill="#E8E6E3"></image>
+    </g>
+  </g>
+</svg>
