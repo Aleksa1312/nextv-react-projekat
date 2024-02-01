@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Card,
   CardContent,
@@ -8,12 +10,17 @@ import {
 import RegisterForm from "../components/register/form";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/modules/ui/tabs";
 import LoginForm from "../components/login/form";
+import { useSearchParams } from "next/navigation";
 
 export default function AuthTemplate() {
+  const searchParams = useSearchParams();
+
+  const tab = searchParams.get("tab") || "register";
+
   return (
     <main className="flex h-full min-h-screen flex-row">
       <div className="w-full p-5 sm:max-w-xl sm:p-10">
-        <Tabs defaultValue="register">
+        <Tabs defaultValue={tab}>
           <TabsList className="w-full">
             <TabsTrigger className="w-full" value="register">
               Register
