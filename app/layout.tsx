@@ -6,6 +6,7 @@ import LoginDialog from "@/modules/auth/components/login/dialog";
 import { ThemeProvider } from "@/modules/theme/components/provider";
 import Footer from "@/modules/footer/components/footer";
 import AuthProvider from "@/modules/auth/components/provider";
+import { Provider as JotaiProvider } from "jotai";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,14 +23,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuthProvider>
-          <ThemeProvider>
-            <Header />
-            <LoginDialog />
-            {children}
-            <Footer />
-          </ThemeProvider>
-        </AuthProvider>
+        <JotaiProvider>
+          <AuthProvider>
+            <ThemeProvider>
+              <Header />
+              <LoginDialog />
+              {children}
+              <Footer />
+            </ThemeProvider>
+          </AuthProvider>
+        </JotaiProvider>
       </body>
     </html>
   );
