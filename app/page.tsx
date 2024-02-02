@@ -1,3 +1,5 @@
+import HomeTemplate from "@/modules/home/template";
+
 export default function Home() {
-  return <main className=""></main>;
+  return <HomeTemplate />;
 }

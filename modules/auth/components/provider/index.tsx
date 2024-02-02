@@ -11,7 +11,6 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
   const setLoading = useSetAtom(userLoadingAtom);
 
   useEffect(() => {
-    console.log("rerender");
     async function fetchUser() {
       setLoading(true);
 

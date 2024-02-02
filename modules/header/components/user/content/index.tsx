@@ -12,7 +12,7 @@ export default function UserContent() {
     return (
       <>
         <DropdownMenuItem asChild>
-          <Link href={"/auth"}>
+          <Link href={"/profile"}>
             <UserIcon className="mr-2 h-4 w-4" /> Profile
           </Link>
         </DropdownMenuItem>
