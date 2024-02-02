@@ -28,7 +28,7 @@ export default function HeroSlide({ title, image, href }: HeroSlideProps) {
           href={href}
           className={buttonVariants({
             variant: "default",
-            className: "mt-5 bg-white text-black hover:bg-white",
+            className: "mt-5 bg-white !text-black hover:bg-white",
           })}
         >
           Details
