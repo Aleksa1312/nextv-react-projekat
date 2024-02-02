@@ -1,4 +1,4 @@
-export function getShowHref(id: number | undefined) {
+export function getTvHref(id: number | undefined) {
   if (!id) return "/";
 
   return `/tv/${id}`;

@@ -2,25 +2,36 @@ import { BackdropSize, LogoSize, ProfileSize, StillSize } from "./sizes";
 
 const baseUrl = "https://image.tmdb.org/t/p/";
 
-export function getOriginalImage(posterId: string) {
-  return `${baseUrl}/original/${posterId}`;
+export function getOriginalImage(image: string | undefined) {
+  if (!image) return;
+  return `${baseUrl}/original/${image}`;
 }
 
 export function getBackdropImage(
-  backdropId: string,
+  image: string | undefined,
   backdropSize: BackdropSize = "original",
 ) {
-  return `${baseUrl}/${backdropSize}/${backdropId}`;
+  if (!image) return;
+  return `${baseUrl}/${backdropSize}/${image}`;
 }
 
-export function getLogoImage(logoId: string, logoSize: LogoSize = "original") {
-  return `${baseUrl}/${logoSize}/${logoId}`;
+export function getLogoImage(
+  image: string | undefined,
+  logoSize: LogoSize = "original",
+) {
+  if (!image) return;
+  return `${baseUrl}/${logoSize}/${image}`;
 }
 
-export function getProfileImage(profileId: string, profileSize: ProfileSize) {
-  return `${baseUrl}/${profileSize}/${profileId}`;
+export function getProfileImage(
+  image: string | undefined,
+  profileSize: ProfileSize,
+) {
+  if (!image) return;
+  return `${baseUrl}/${profileSize}/${image}`;
 }
 
-export function getStillImage(stillId: string, stillSize: StillSize) {
-  return `${baseUrl}/${stillId}/${stillSize}`;
+export function getStillImage(image: string | undefined, stillSize: StillSize) {
+  if (!image) return;
+  return `${baseUrl}/${image}/${stillSize}`;
 }

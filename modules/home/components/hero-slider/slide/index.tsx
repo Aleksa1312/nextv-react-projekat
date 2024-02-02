@@ -5,13 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 export type HeroSlideProps = {
-  title: string | undefined;
+  name: string | undefined;
   image: string | undefined;
   href: string | undefined;
 };
 
-export default function HeroSlide({ title, image, href }: HeroSlideProps) {
-  if (!title || !image || !href) return;
+export default function HeroSlide({ name, image, href }: HeroSlideProps) {
+  if (!name || !image || !href) return;
 
   return (
     <CarouselItem className="relative h-full max-h-[600px] w-full pl-0">
@@ -23,7 +23,7 @@ export default function HeroSlide({ title, image, href }: HeroSlideProps) {
         className="h-fit w-full object-contain object-bottom brightness-75"
       />
       <div className="sm: absolute bottom-0 left-0 max-w-xl p-5 text-white sm:p-10 sm:pb-16">
-        <h1 className="text-xl font-bold sm:text-3xl lg:text-4xl">{title}</h1>
+        <h1 className="text-xl font-bold sm:text-3xl lg:text-4xl">{name}</h1>
         <Link
           href={href}
           className={buttonVariants({

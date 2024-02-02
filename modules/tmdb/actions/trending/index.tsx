@@ -1,17 +1,6 @@
 import { MovieResult, PersonResult, TvResult } from "moviedb-promise";
 import { tmdb } from "../../client";
-
-function isTvResult(object: any): object is TvResult {
-  return object.media_type === "tv";
-}
-
-function isMovieResult(object: any): object is MovieResult {
-  return object.media_type === "movie";
-}
-
-function isPersonResult(object: any): object is PersonResult {
-  return object.media_type === "person";
-}
+import { isTvResult, isMovieResult, isPersonResult } from "../../utils/type";
 
 export async function fetchTvTrending(): Promise<TvResult[]> {
   try {

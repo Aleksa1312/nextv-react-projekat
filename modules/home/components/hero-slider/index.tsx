@@ -8,24 +8,24 @@ import {
 } from "@/modules/ui/carousel";
 import HeroSlide from "./slide";
 import { TvResult } from "moviedb-promise";
-import { getShowHref } from "@/modules/tmdb/utils/href";
+import { getTvHref } from "@/modules/tmdb/utils/href";
 
 type HeroSliderProps = {
-  slides: TvResult[] | undefined;
+  results: TvResult[] | undefined;
 };
 
-export default function HeroSlider({ slides }: HeroSliderProps) {
-  if (!slides) return <></>;
+export default function HeroSlider({ results }: HeroSliderProps) {
+  if (!results) return <></>;
 
   return (
     <Carousel>
       <CarouselContent className="ml-0 h-full w-full">
-        {slides.map((slide, id) => (
+        {results.map(({ name, backdrop_path, id }, idx) => (
           <HeroSlide
-            title={slide.name}
-            image={slide.backdrop_path}
-            href={getShowHref(slide.id)}
-            key={id}
+            name={name}
+            image={backdrop_path}
+            href={getTvHref(id)}
+            key={idx}
           />
         ))}
       </CarouselContent>
