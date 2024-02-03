@@ -1,5 +1,9 @@
 import AuthTemplate from "@/modules/auth/template";
 
-export default function AuthPage() {
-  return <AuthTemplate />;
+export default function AuthPage({
+  searchParams,
+}: {
+  searchParams: { tab: string | undefined };
+}) {
+  return <AuthTemplate defaultTab={searchParams.tab} />;
 }
