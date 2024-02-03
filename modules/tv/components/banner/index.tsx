@@ -1,6 +1,10 @@
+"use client";
+
+import { cn } from "@/lib/utils";
 import { StarIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 type BannerProps = {
   name: string | undefined;
@@ -17,10 +21,22 @@ export default function Banner({
   image,
   date,
 }: BannerProps) {
+  const [loading, setLoading] = useState<boolean>(true);
+
+  function onLoad() {
+    console.log("loaded");
+    setLoading(false);
+  }
+
   if (!name || !image || !href) return;
 
   return (
-    <Link href={href} className="group flex h-fit w-full max-w-xs flex-col">
+    <Link
+      href={href}
+      className={cn("group flex h-fit w-full max-w-xs flex-col", {
+        "h-0": loading,
+      })}
+    >
       <div className="relative h-fit w-fit overflow-hidden rounded-[--radius]">
         <Image
           src={image}
@@ -28,6 +44,7 @@ export default function Banner({
           height={740}
           alt="banner image"
           className="brightness-75 duration-200 group-hover:scale-105 group-hover:brightness-90"
+          onLoad={onLoad}
         />
         <p className="absolute bottom-0 right-0 flex flex-row gap-2 p-5 text-white">
           <StarIcon className="text-transparent" fill="yellow" />
