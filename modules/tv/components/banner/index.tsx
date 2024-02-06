@@ -24,7 +24,6 @@ export default function Banner({
   const [loading, setLoading] = useState<boolean>(true);
 
   function onLoad() {
-    console.log("loaded");
     setLoading(false);
   }
 
