@@ -1,11 +1,11 @@
 export function getTvHref(id: number | undefined) {
   if (!id) return "/";
 
-  return `/tv/${id}`;
+  return `details/tv/${id}`;
 }
 
 export function getMovieHref(id: number | undefined) {
   if (!id) return "/";
 
-  return `/movie/${id}`;
+  return `details/movie/${id}`;
 }
