@@ -20,7 +20,7 @@ export default function HeroSlide({ name, image, href }: HeroSlideProps) {
         width={1920}
         height={1080}
         alt="show image"
-        className="h-fit w-full object-contain object-bottom brightness-75"
+        className="h-fit w-full bg-secondary object-contain object-bottom brightness-75"
       />
       <div className="sm: absolute bottom-0 left-0 max-w-xl p-5 text-white sm:p-10 sm:pb-16">
         <h1 className="text-xl font-bold sm:text-3xl lg:text-4xl">{name}</h1>
