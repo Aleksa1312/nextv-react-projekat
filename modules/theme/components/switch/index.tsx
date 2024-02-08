@@ -1,19 +1,31 @@
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "../../hooks/useTheme";
+import { HTMLAttributes } from "react";
+import { cn } from "@/lib/utils";
 
-export default function ThemeSwitch() {
+interface ThemeSwitchProps extends HTMLAttributes<HTMLButtonElement> {}
+
+export default function ThemeSwitch({ className, ...rest }: ThemeSwitchProps) {
   const { isDark, toggleTheme } = useTheme();
 
   return (
     <>
       {isDark ? (
-        <div className="flex flex-row items-center" onClick={toggleTheme}>
+        <button
+          className={cn("flex flex-row items-center", className)}
+          onClick={toggleTheme}
+          {...rest}
+        >
           <SunIcon className="mr-2 h-4 w-4" /> Light
-        </div>
+        </button>
       ) : (
-        <div className="flex flex-row items-center" onClick={toggleTheme}>
+        <button
+          className={cn("flex flex-row items-center", className)}
+          onClick={toggleTheme}
+          {...rest}
+        >
           <MoonIcon className="mr-2 h-4 w-4" /> Dark
-        </div>
+        </button>
       )}
     </>
   );
