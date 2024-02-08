@@ -1,6 +1,6 @@
 import { formatStringDate } from "@/lib/format/date";
 import { Separator } from "@/modules/ui/separator";
-import DeleteComment from "./delete";
+import DeleteComment from "../delete";
 
 export type CommentType = {
   email: string;

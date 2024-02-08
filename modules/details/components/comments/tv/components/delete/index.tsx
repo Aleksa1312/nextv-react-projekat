@@ -13,7 +13,7 @@ import {
 import { Button } from "@/modules/ui/button";
 import LoaderButton from "@/modules/ui/loader-button";
 import { useState } from "react";
-import useRefetch from "../../atom/hooks/useRefetch";
+import useRefetch from "../../../common/atom/hooks/useRefetch";
 import { useToast } from "@/modules/ui/use-toast";
 import { ToastAction } from "@/modules/ui/toast";
 
@@ -42,7 +42,7 @@ export default function DeleteComment({ email, id }: DeleteCommentProps) {
     setLoading(true);
 
     const { data, error } = await supabase
-      .from("movie_comments")
+      .from("tv_comments")
       .delete()
       .match({ id: id })
       .select();

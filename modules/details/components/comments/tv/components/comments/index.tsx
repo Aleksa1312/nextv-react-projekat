@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Comment, { CommentType } from "../../../common/comment";
+import Comment, { CommentType } from "../comment";
 import { LoaderIcon, MessageCircleDashedIcon } from "lucide-react";
 import supabase from "@/modules/supabase/components/client";
 import { useAtomValue } from "jotai";
