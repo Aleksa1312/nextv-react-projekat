@@ -11,8 +11,11 @@ import {
 import { User2Icon } from "lucide-react";
 import UserName from "./name";
 import UserContent from "./content";
+import { useTheme } from "@/modules/theme/hooks/useTheme";
 
 export default function HeaderUser() {
+  const { toggleTheme } = useTheme();
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -30,8 +33,8 @@ export default function HeaderUser() {
         <DropdownMenuSeparator />
         <UserContent />
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <ThemeSwitch />
+        <DropdownMenuItem onClick={toggleTheme}>
+          <ThemeSwitch className="pointer-events-none" />
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
