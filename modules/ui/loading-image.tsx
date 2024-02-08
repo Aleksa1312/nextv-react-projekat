@@ -22,7 +22,7 @@ export default function LoadingImage({
   return (
     <div
       className={cn(
-        `max-w-sm rounded-[var(--radius)] bg-secondary`,
+        `rounded-[var(--radius)] bg-secondary`,
         className,
         loading && `relative flex h-fit w-fit items-center justify-center`,
       )}
@@ -36,7 +36,7 @@ export default function LoadingImage({
         height={height}
         alt={alt}
         className={cn(className, loading && "opacity-0")}
-        onLoadingComplete={onFinishLoading}
+        onLoad={onFinishLoading}
         {...rest}
       />
     </div>
