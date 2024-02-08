@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/modules/theme/components/provider";
 import Footer from "@/modules/footer/components/footer";
 import AuthProvider from "@/modules/auth/components/provider";
 import { Provider as JotaiProvider } from "jotai";
+import { Toaster } from "@/modules/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
               <LoginDialog />
               {children}
               <Footer />
+              <Toaster />
             </ThemeProvider>
           </AuthProvider>
         </JotaiProvider>

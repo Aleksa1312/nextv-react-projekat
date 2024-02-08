@@ -2,13 +2,13 @@ import { BackdropSize, LogoSize, ProfileSize, StillSize } from "./sizes";
 
 const baseUrl = "https://image.tmdb.org/t/p/";
 
-export function getOriginalImage(image: string | undefined): string {
+export function getOriginalImage(image: string | undefined | null): string {
   if (!image) return "";
   return `${baseUrl}/original/${image}`;
 }
 
 export function getBackdropImage(
-  image: string | undefined,
+  image: string | undefined | null,
   backdropSize: BackdropSize = "original",
 ): string {
   if (!image) return "";
@@ -16,7 +16,7 @@ export function getBackdropImage(
 }
 
 export function getLogoImage(
-  image: string | undefined,
+  image: string | undefined | null,
   logoSize: LogoSize = "original",
 ): string {
   if (!image) return "";
@@ -24,7 +24,7 @@ export function getLogoImage(
 }
 
 export function getProfileImage(
-  image: string | undefined,
+  image: string | undefined | null,
   profileSize: ProfileSize,
 ): string {
   if (!image) return "";
@@ -32,7 +32,7 @@ export function getProfileImage(
 }
 
 export function getStillImage(
-  image: string | undefined,
+  image: string | undefined | null,
   stillSize: StillSize,
 ): string {
   if (!image) return "";
