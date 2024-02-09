@@ -12,6 +12,7 @@ import {
   getNameTitle,
   getShowMovieDate,
 } from "@/modules/tmdb/utils/show-movie";
+import MediaTypeBadge from "../components/info/media-type-badge";
 
 type DetailsTemplateProps = {
   showMovie: MovieResponse | ShowResponse | null;
@@ -36,9 +37,10 @@ export default function DetailsTemplate({ showMovie }: DetailsTemplateProps) {
             />
             <div className="mt-5 flex w-fit flex-col justify-start gap-2 md:mt-0 md:max-w-xl">
               <div>
-                <h1 className="text-2xl font-semibold md:text-3xl md:font-bold">
+                <h1 className="mb-1 text-2xl font-semibold md:text-3xl md:font-bold">
                   {getNameTitle(showMovie)}
                 </h1>
+                <MediaTypeBadge />
               </div>
               <Info
                 releaseDate={getShowMovieDate(showMovie)}
