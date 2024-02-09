@@ -1,6 +1,6 @@
 "use client";
 
-import useScreenWidth from "@/modules/common/hooks/useScreenSize";
+import useScreenWidth from "@/modules/common/hooks/useScreenWidth";
 import { links } from "./links";
 import NavigationSheet from "../sheet";
 import HeaderLink from "../link";
