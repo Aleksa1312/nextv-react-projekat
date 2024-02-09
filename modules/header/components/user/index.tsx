@@ -19,10 +19,10 @@ export default function HeaderUser() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant={"ghost"} size={"icon"}>
+        <Button variant={"outline"} size={"icon"} aria-label="profile settings">
           <Avatar>
             <AvatarImage />
-            <AvatarFallback>
+            <AvatarFallback className="bg-transparent">
               <User2Icon className="h-6 w-6 text-foreground" />
             </AvatarFallback>
           </Avatar>
