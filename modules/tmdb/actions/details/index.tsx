@@ -1,6 +1,19 @@
 import { MovieResponse, ShowResponse } from "moviedb-promise";
 import { tmdb } from "../../client";
 
+export async function fetchDetailsById(
+  id: string,
+  media_type: "tv" | "movie",
+): Promise<ShowResponse | MovieResponse | null> {
+  try {
+    if (media_type === "tv") return await fetchTvDetailsById(id);
+    if (media_type === "movie") return await fetchMovieDetailsById(id);
+  } catch (error) {
+    console.log(error);
+  }
+  return null;
+}
+
 export async function fetchTvDetailsById(
   id: string,
 ): Promise<ShowResponse | null> {

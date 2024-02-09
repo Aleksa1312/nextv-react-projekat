@@ -1,9 +1,5 @@
-import MovieDetailsTemplate from "@/modules/details/template/movie";
-import TvDetailsTemplate from "@/modules/details/template/tv";
-import {
-  fetchMovieDetailsById,
-  fetchTvDetailsById,
-} from "@/modules/tmdb/actions/details";
+import DetailsTemplate from "@/modules/details/template";
+import { fetchDetailsById } from "@/modules/tmdb/actions/details";
 import { notFound } from "next/navigation";
 
 type DetailsProps = {
@@ -18,17 +14,9 @@ export default async function Details({ params }: DetailsProps) {
 
   if ((media_type !== "tv" && media_type !== "movie") || !id) return notFound();
 
-  if (media_type === "tv") {
-    const tv = await fetchTvDetailsById(id);
+  const showMovie = await fetchDetailsById(id, media_type);
 
-    return <TvDetailsTemplate tv={tv} />;
-  }
+  if (!showMovie) return notFound();
 
-  if (media_type === "movie") {
-    const movie = await fetchMovieDetailsById(id);
-
-    return <MovieDetailsTemplate movie={movie} />;
-  }
-
-  return <></>;
+  return <DetailsTemplate showMovie={showMovie} />;
 }
