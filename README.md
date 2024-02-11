@@ -1,5 +1,5 @@
 # Uvod
-Ovaj projekat je seminarski rad za predmet Elektronskog Poslovanja.
+Ovaj projekat je seminarski rad za predmet Elektronskog Poslovanja na Fakultetu Organizacionih Nauka.
 
 ### NextTV je platforma za pronalazenje filmova i serija kao i za deljenje misljenja o vec pogledanim filmovima i serijama.
 
