@@ -1,3 +1,6 @@
+import { ShowMovie } from "@/modules/show-movie/types";
+import { isMovieResult, isTvResult } from "../type";
+
 export function getTvHref(id: number | undefined) {
   if (!id) return "/";
 
@@ -10,10 +13,9 @@ export function getMovieHref(id: number | undefined) {
   return `/details/movie/${id}`;
 }
 
-export function getShowMovieHref(
-  id: number | undefined,
-  media_type: "tv" | "movie",
-) {
-  if (media_type === "tv") return getTvHref(id);
-  return getMovieHref(id);
+export function getShowMovieHref(item: ShowMovie) {
+  if (isMovieResult(item)) return getMovieHref(item.id);
+  if (isTvResult(item)) return getTvHref(item.id);
+
+  return undefined;
 }

@@ -18,7 +18,7 @@ export default function SearchGrid({ items = [] }: SearchGridProps) {
         <Banner
           nameTitle={getNameTitle(item)}
           date={getShowMovieDate(item)}
-          href={getShowMovieHref(item.id, item.media_type)}
+          href={getShowMovieHref(item)}
           image={getOriginalImage(item.backdrop_path)}
           rating={item.vote_average}
           key={id}
