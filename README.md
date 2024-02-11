@@ -4,7 +4,7 @@ Ovaj projekat je seminarski rad za predmet Elektronskog Poslovanja.
 ### NextTV je platforma za pronalazenje filmova i serija kao i za deljenje misljenja o vec pogledanim filmovima i serijama.
 
 # Tehnologije
-Koriscene tehnologije su: React.js, Next.js, Tailwindcss, Supabase, TMDB Api, Jotai.
+Koriscene tehnologije su: React.js, Next.js, TypeScript, Tailwindcss, Supabase, TMDB Api, Jotai.
 Biblioteke za komponente: RadixUI, cmdk, embla-carousel-react.
 
 # Struktura foldera
