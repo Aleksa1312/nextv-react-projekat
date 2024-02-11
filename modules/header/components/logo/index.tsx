@@ -18,7 +18,7 @@ export default function Logo({ className, ...rest }: LogoProps) {
       href="/"
       className={buttonVariants({
         variant: "ghost",
-        className: cn("text-xl font-bold md:flex xl:text-2xl", className),
+        className: cn("w-fit text-xl font-bold md:flex xl:text-2xl", className),
       })}
       {...rest}
     >
