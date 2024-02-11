@@ -4,7 +4,7 @@ export function getGenresString(genres: Genre[]): string {
   let string = "";
 
   genres.forEach((genre) => {
-    string = `${string},${genre.id}`;
+    string = `${string}${string !== "" ? "," : ""}${genre.id}`;
   });
 
   return string;
