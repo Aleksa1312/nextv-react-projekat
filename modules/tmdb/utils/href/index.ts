@@ -9,3 +9,11 @@ export function getMovieHref(id: number | undefined) {
 
   return `/details/movie/${id}`;
 }
+
+export function getShowMovieHref(
+  id: number | undefined,
+  media_type: "tv" | "movie",
+) {
+  if (media_type === "tv") return getTvHref(id);
+  return getMovieHref(id);
+}
