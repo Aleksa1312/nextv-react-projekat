@@ -1,4 +1,4 @@
-import BannerSlider from "@/modules/tv/components/banner-slider";
+import BannerSlider from "@/modules/show-movie/components/banner-slider";
 import { TvResult } from "moviedb-promise";
 
 type TopRatedTvProps = {
