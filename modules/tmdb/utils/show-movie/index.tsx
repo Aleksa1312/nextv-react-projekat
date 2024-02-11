@@ -16,8 +16,6 @@ export function getShowMovieDate(
 ): string {
   if (!showMovie) return "";
 
-  console.log(showMovie);
-
   const isMovie = isMovieResponse(showMovie);
 
   return (isMovie ? showMovie.release_date : showMovie.first_air_date) || "";
