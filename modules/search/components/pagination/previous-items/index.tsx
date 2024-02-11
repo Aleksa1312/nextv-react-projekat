@@ -14,21 +14,22 @@ export default function PaginationPreviousItems({
 }) {
   const { setPage } = useSearchState();
   const looper = Array.from(Array(max));
-  const requiresFirst = page - max > 2;
+  const requiresFirst = page - max >= 2;
+  const requiresDots = page - max > 2;
 
   return (
     <>
       {requiresFirst && (
-        <>
-          <PaginationItem>
-            <PaginationLink href="#" onClick={() => setPage(1)}>
-              1
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationEllipsis />
-          </PaginationItem>
-        </>
+        <PaginationItem>
+          <PaginationLink href="#" onClick={() => setPage(1)}>
+            1
+          </PaginationLink>
+        </PaginationItem>
+      )}
+      {requiresDots && (
+        <PaginationItem>
+          <PaginationEllipsis />
+        </PaginationItem>
       )}
       {looper
         .map((_, id) => {

@@ -16,7 +16,8 @@ export default function PaginationNext({
 }) {
   const { setPage } = useSearchState();
   const looper = Array.from(Array(max));
-  const requiresLast = page + max + 1 < totalPages;
+  const requiresLast = page + max + 1 <= totalPages;
+  const requiresDots = page + max + 1 < totalPages;
 
   return (
     <>
@@ -33,17 +34,17 @@ export default function PaginationNext({
           </PaginationItem>
         );
       })}
+      {requiresDots && (
+        <PaginationItem>
+          <PaginationEllipsis />
+        </PaginationItem>
+      )}
       {requiresLast && (
-        <>
-          <PaginationItem>
-            <PaginationEllipsis />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#" onClick={() => setPage(totalPages)}>
-              {totalPages}
-            </PaginationLink>
-          </PaginationItem>
-        </>
+        <PaginationItem>
+          <PaginationLink href="#" onClick={() => setPage(totalPages)}>
+            {totalPages}
+          </PaginationLink>
+        </PaginationItem>
       )}
     </>
   );
