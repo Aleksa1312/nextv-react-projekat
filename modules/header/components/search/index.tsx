@@ -5,16 +5,15 @@ import {
   CommandEmpty,
   CommandGroup,
   CommandList,
-  CommandSeparator,
 } from "@/modules/ui/search-command";
-import { ChangeEvent, useCallback, useEffect, useState } from "react";
+import { ChangeEvent, useCallback, useEffect, useRef, useState } from "react";
 import { MovieResult, TvResult } from "moviedb-promise";
 import { searchMovies, searchTvShows } from "@/modules/tmdb/actions/search";
 import { Input } from "@/modules/ui/input";
 import { getMovieHref, getTvHref } from "@/modules/tmdb/utils/href";
 import { getBackdropImage } from "@/modules/tmdb/utils/image";
 import SearchItem from "./item";
-import { Loader } from "lucide-react";
+import { Skeleton } from "@/modules/ui/skeleton";
 
 export function Search() {
   const [open, setOpen] = useState<boolean>(false);
@@ -24,6 +23,8 @@ export function Search() {
 
   const [showResults, setShowResults] = useState<TvResult[]>([]);
   const [movieResults, setMovieResults] = useState<MovieResult[]>([]);
+
+  const searchTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   function onSearchChange(e: ChangeEvent<HTMLInputElement>) {
     setSearch(e.target.value);
@@ -56,14 +57,22 @@ export function Search() {
   }, [hover]);
 
   useEffect(() => {
-    async function handleSearch() {
+    if (search === "") return;
+
+    if (searchTimeoutRef.current) {
+      clearTimeout(searchTimeoutRef.current);
+    }
+
+    searchTimeoutRef.current = setTimeout(async () => {
       setLoading(true);
       setShowResults(await searchTvShows(search));
       setMovieResults(await searchMovies(search));
-      setLoading(true);
-    }
+      setLoading(false);
+    }, 250);
 
-    handleSearch();
+    return () => {
+      if (searchTimeoutRef.current) clearTimeout(searchTimeoutRef.current);
+    };
   }, [search]);
 
   return (
@@ -78,11 +87,11 @@ export function Search() {
       />
       {open && (
         <CommandList
-          className="animate-fade-down animate-duration-75 fixed left-0 right-0 top-20 mx-auto min-h-10 w-[calc(100vw-1.25rem)] border sm:absolute sm:w-full"
+          className="fixed left-0 right-0 top-20 mx-auto min-h-10 w-[calc(100vw-1.25rem)] animate-fade-down border animate-duration-75 sm:absolute sm:w-full"
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
         >
-          <CommandEmpty>No results found.</CommandEmpty>
+          {loading && <Skeleton className="h-full w-full" />}
           {showResults.length ? (
             <CommandGroup heading="Shows">
               {showResults
