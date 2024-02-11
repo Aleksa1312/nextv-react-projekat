@@ -31,21 +31,20 @@ export default function PaginationPreviousItems({
           <PaginationEllipsis />
         </PaginationItem>
       )}
-      {looper
-        .map((_, id) => {
-          const pageNum = page - id - 1;
+      {looper.map((_, id) => {
+        const reversedId = looper.length - 1 - id;
+        const pageNum = page - reversedId - 1;
 
-          if (pageNum <= 0) return;
+        if (pageNum <= 0) return;
 
-          return (
-            <PaginationItem key={id}>
-              <PaginationLink href="#" onClick={() => setPage(pageNum)}>
-                {pageNum}
-              </PaginationLink>
-            </PaginationItem>
-          );
-        })
-        .toReversed()}
+        return (
+          <PaginationItem key={id}>
+            <PaginationLink href="#" onClick={() => setPage(pageNum)}>
+              {pageNum}
+            </PaginationLink>
+          </PaginationItem>
+        );
+      })}
     </>
   );
 }
