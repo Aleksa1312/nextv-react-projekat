@@ -12,7 +12,7 @@ Ovaj projekat je seminarski rad za predmet Elektronskog Poslovanja na Fakultetu 
 ## Tehnologije
 
 - Koriscene tehnologije su: React.js, Next.js, TypeScript, Tailwindcss, Supabase, TMDB Api, Jotai.
-- Biblioteke za komponente: RadixUI, cmdk, embla-carousel-react.
+- Biblioteke za komponente: shadcn/ui, radixui, cmdk, embla-carousel-react.
 
 ## Struktura foldera
 
