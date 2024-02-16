@@ -16,7 +16,16 @@ Ovaj projekat je seminarski rad za predmet Elektronskog Poslovanja na Fakultetu 
 
 ## Struktura foldera
 
-Projekat je podeljen preme next.js-ovom principu gde app se koristi app router za ssr.
+Projekat je koristi App router koji sluzi za file-based routing gde svaki folder dodaje svoje ime u link, npr. u sledecem primeru imamo projekat sa 2 stranice. Jedna stranica je home page na ruti `/` i druga details stranica na ruti `/details/`
+
+```
+app/
+  page.tsx
+  details/
+    page.tsx
+```
+
+
 - U App folderu se nalaze sve stranice, layoutovi i ostalo.
 - Komponente su podeljene po modulima, gde svaki modul predstavlja jednu funkciju na sajtu. Npr. sve komponente util-i i ostalo sto ima veze za auth se nalaze u auth modulu, itd.
 
