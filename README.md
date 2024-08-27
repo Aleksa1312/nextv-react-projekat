@@ -3,7 +3,6 @@
 Radili: 
 - Aleksa Simovic 0388/2023
 - Ognjen Urukalo 0361/2023
-- Lazar Scepanovic 0992/2023
 
 Ovaj projekat je seminarski rad za predmet Elektronskog Poslovanja na Fakultetu Organizacionih Nauka.
 
